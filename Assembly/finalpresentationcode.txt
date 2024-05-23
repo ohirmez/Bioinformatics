@@ -41,4 +41,16 @@ pico .gitignore
 #to see what needs to be committed in the git repository 
 git status
 
-#
+#o add files to your repository 
+git add (folder name)
+
+#To check if the folder got added
+git status
+
+#to setup everything to upload
+git commit -m "first upload"
+
+#to add files to my github
+git remote add origin git@github.com:ohirmez/Bioinformatics.git
+git branch -M main
+git push -u origin main
