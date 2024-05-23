@@ -1,0 +1,44 @@
+>Codes for genome assembly final
+
+#create a new environment 
+mamba create --name finalpresentation
+
+#activate the new environment 
+mamba activate finalpresentation
+
+#installing abyss
+mamba install -c bioconda -c conda-forge abyss
+
+#changing directory 
+cd (then drag the folder from the finder location)
+
+#checking if my reads.fastq files are in the folder
+ls
+
+#to run abyss
+abyss-pe name=moraxella k=96 B=2G in='final1.fastq.gz final2.fastq.gz'
+
+#activate your genome assembly environment
+mamba activate finalpresentation
+
+#install prokka using conda/mamba 
+conda/mamba install -c conda-forge -c bioconda -c defaults prokka 
+
+#run prokka 
+prokka --outdir prokkaannotation --prefix moraxella AbyssOutput/moraxella-8.fa
+
+#uploading everything to GitHub
+
+#change directory (to your bioinformatics folder)
+cd (drag the folder from your finder to terminal then hit enter)
+
+#to create a file in the directory
+git init .
+
+#to open the file (tell it what files to not upload)
+pico .gitignore
+
+#to see what needs to be committed in the git repository 
+git status
+
+#
